@@ -1,0 +1,13 @@
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\GasMon.exe
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\GasMon.deps.json
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\GasMon.runtimeconfig.json
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\GasMon.runtimeconfig.dev.json
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\GasMon.dll
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\GasMon.pdb
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.csprojAssemblyReference.cache
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.csproj.CoreCompileInputs.cache
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.AssemblyInfoInputs.cache
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.AssemblyInfo.cs
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.dll
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.pdb
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.genruntimeconfig.cache
