@@ -35,6 +35,8 @@
 *.suo
 *.user
 .vs/
+.bin/
+.obj/
 [Bb]in/
 [Oo]bj/
 _UpgradeReport_Files/
