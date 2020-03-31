@@ -10,11 +10,11 @@ namespace GasMon
     {
         static void Main(string[] args)
         {
-            var s3Request = new S3Request();
+            var s3Client = new AmazonS3Client();
+            var s3Request = new S3Request(s3Client);
             var locations = s3Request.FetchLocations();
             
             Console.WriteLine(locations);
-            Console.ReadLine();
         }
     }
 }
