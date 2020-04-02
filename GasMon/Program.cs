@@ -20,8 +20,12 @@ namespace GasMon
             var sqsService = new SQSService(sqsClient);
             var snsService = new SNSService(snsClient, sqsClient);
             
-            var locations = s3Request.FetchLocations();
-            
+            var locations = s3Request.CreateLocationsList();
+            foreach (var loc in locations)
+            {
+                Console.WriteLine($"Location id: {loc.Id} had coordinates x: {loc.X} and y: {loc.Y}");
+            }
+
             var processor = new MessageProcessor(sqsService);
 
             using (var queue = new SQSQueue(sqsService, snsService))
