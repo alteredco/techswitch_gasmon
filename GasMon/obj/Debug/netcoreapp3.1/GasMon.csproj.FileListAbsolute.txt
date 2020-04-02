@@ -17,3 +17,5 @@ C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\AWSSDK.Se
 C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\AWSSDK.SQS.dll
 C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\WenKak\Desktop\Training\GasMon\GasMon\obj\Debug\netcoreapp3.1\GasMon.csproj.CopyComplete
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\AWSSDK.SimpleNotificationService.dll
+C:\Users\WenKak\Desktop\Training\GasMon\GasMon\bin\Debug\netcoreapp3.1\aws-sdk-net-core-support.dll

@@ -1,49 +1,34 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Amazon.S3;
 using Amazon.SQS;
 using Amazon.SQS.Model;
 
 namespace GasMon
 {
-    public class SQSQueue
+    public class SQSQueue : IDisposable
     {
-        public static string CreateSQSQueue()
+        private readonly SQSService _sqsService;
+        private readonly SNSService _snsService;
+
+        public string QueueUrl { get; }
+        private readonly string _subscriptionArn;
+        public SQSQueue(SQSService sqsService, SNSService snsService)
         {
-            AmazonSQSClient sqsClient = new AmazonSQSClient();
-            CreateQueueRequest sqsRequest = new CreateQueueRequest();
-            sqsRequest.QueueName = "GasMonQueue";
-            var response = sqsClient.CreateQueueAsync(sqsRequest);
+            _sqsService = sqsService;
+            _snsService = snsService;
+
+            QueueUrl = sqsService.CreateQueueAsync().Result;
+            _subscriptionArn = _snsService.SubscribeQueueAsync(QueueUrl).Result;
+
+        }
+
         
-            return response.QueueUrl;
-        }
-
-        public async void ReadSQSQueue(string queueUrl, string messageBody)
+        public void Dispose()
         {
-            AmazonSQSClient sqsClient = new AmazonSQSClient();
-            ReceiveMessageRequest messageRequest =  
-                new ReceiveMessageRequest(queueUrl);
-            ReceiveMessageResponse messageResponse = await sqsClient.ReceiveMessageAsync(messageRequest);
-            bool noMoreMessages = false;
-
-            if (messageResponse.Messages.Count != 0)
-            {
-                for(int i = 0; i < messageResponse.Messages.Count; i++)
-                {
-                    if (messageResponse.Messages[i].Body == messageBody)
-                    {
-                        var receiptHandle = messageResponse.Messages[i].ReceiptHandle;
-                    } 
-                }
-            }
-            
-        }
-
-        public async void DeleteSQSMessage(string queueUrl, string receiptHandle, AmazonSQSClient client)
-        {
-            DeleteMessageRequest deleteMessageRequest = new DeleteMessageRequest();
-            deleteMessageRequest.QueueUrl = queueUrl;
-            deleteMessageRequest.ReceiptHandle = receiptHandle;
-
-            DeleteMessageResponse deleteMessageResponse = await client.DeleteMessageAsync(deleteMessageRequest);
+            _snsService.UnsubscribeQueueAsync(_subscriptionArn).Wait();
+            _sqsService.DeleteQueueAsync(QueueUrl).Wait();
         }
     }
 }

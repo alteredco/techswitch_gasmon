@@ -8,9 +8,11 @@
     ".NETCoreApp,Version=v3.1": {
       "GasMon/1.0.0": {
         "dependencies": {
+          "AWSSDK.Core": "3.5.0-beta",
           "AWSSDK.S3": "3.5.0-beta",
           "AWSSDK.SQS": "3.5.0-beta",
           "AWSSDK.SecurityToken": "3.5.0-beta",
+          "AWSSDK.SimpleNotificationService.NetCore.Support": "1.0.2",
           "Newtonsoft.Json": "9.0.1"
         },
         "runtime": {
@@ -44,6 +46,29 @@
           "lib/netstandard2.0/AWSSDK.SecurityToken.dll": {
             "assemblyVersion": "3.3.0.0",
             "fileVersion": "3.5.0.0"
+          }
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.3.0.11": {
+        "dependencies": {
+          "AWSSDK.Core": "3.5.0-beta"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AWSSDK.SimpleNotificationService.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.11"
+          }
+        }
+      },
+      "AWSSDK.SimpleNotificationService.NetCore.Support/1.0.2": {
+        "dependencies": {
+          "AWSSDK.Core": "3.5.0-beta",
+          "AWSSDK.SimpleNotificationService": "3.3.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.3/aws-sdk-net-core-support.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -431,6 +456,20 @@
       "sha512": "sha512-GwJOeYCLMZKKLjSrHKeYNyySCygqCsXc8L/mUuIfh12BUS3/cg3kAMLYyOZq+YD5S3ahEFKiU5ZL0Jq2pMAvLg==",
       "path": "awssdk.securitytoken/3.5.0-beta",
       "hashPath": "awssdk.securitytoken.3.5.0-beta.nupkg.sha512"
+    },
+    "AWSSDK.SimpleNotificationService/3.3.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WyOgEiTaiESXEKgG/eCBfXqvcWguukp3SZKVpqcOj1emmgFhPlyakk7eGrytVk/bMuJ+MSmfszv385eBnSo/Qw==",
+      "path": "awssdk.simplenotificationservice/3.3.0.11",
+      "hashPath": "awssdk.simplenotificationservice.3.3.0.11.nupkg.sha512"
+    },
+    "AWSSDK.SimpleNotificationService.NetCore.Support/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rLt5ulWDgn0NG8HW7g2EYEao3AqGQLq2Oc1a62NKCTS9ouBUPUzggS45xDDcBSPS7TWzT11YFc0vk47B2aaiog==",
+      "path": "awssdk.simplenotificationservice.netcore.support/1.0.2",
+      "hashPath": "awssdk.simplenotificationservice.netcore.support.1.0.2.nupkg.sha512"
     },
     "AWSSDK.SQS/3.5.0-beta": {
       "type": "package",
